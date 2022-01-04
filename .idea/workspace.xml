@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/AutumnSequence.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/LogContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/LogInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InterceptorRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InvocationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InvocationInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/ServerRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/ServerRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/communication/message/InternMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/communication/message/InternMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +46,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1z6Aufv0WsAXrTZyFBq34UL8kgB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,6 +63,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -54,10 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="extension_pattern" />
       <recent name="util.message" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationRegistration">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApplicationRegistration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.registration.ApplicationRegistration" />
       <module name="middleware" />
@@ -128,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicationRegistration" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ApplicationRegistration" />
         <item itemvalue="JUnit.Testhashmap.testHash" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.ReactorManager" />
@@ -161,5 +180,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/middleware$Main.ic" NAME="Main Coverage Results" MODIFIED="1640724610378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>application.*</FILTER>
+    </SUITE>
   </component>
 </project>

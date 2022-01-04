@@ -1,0 +1,14 @@
+
+Mon Jan 03 21:00:05 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:06 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:07 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:07 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:09 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:10 BRT 2022 - REQUEST/GET - Interceptor: logger
+
+Mon Jan 03 21:00:10 BRT 2022 - REQUEST/GET - Interceptor: logger

@@ -1,5 +1,6 @@
 package middleware;
 
+import extension_patterns.InterceptorRegistry;
 import middleware.communication.message.InternMessage;
 import middleware.communication.message.MessageType;
 import middleware.communication.message.ResponseMessage;
@@ -24,14 +25,14 @@ import java.util.concurrent.ThreadPoolExecutor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ServerRequestHandler {
-
     private final int MAX_THREAD_NUMBER = Runtime.getRuntime().availableProcessors() / 2;
     private int SERVER_PORT = 7080;
-  
+    private InterceptorRegistry interceptorRegistry;
     /**
      * Main function from Server Request Handler, wait for connections
      * and instantiates new thread for each connection
-     */    
+     */
+
     public void run() {
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(MAX_THREAD_NUMBER);
         try {
@@ -41,7 +42,7 @@ public class ServerRequestHandler {
                 log.info("Waiting for client requests...");
                 Socket remote = serverSocket.accept();
                 log.info("Connection done");
-                executor.execute(new ServerHandler(remote));
+                executor.execute(new ServerHandler(remote, interceptorRegistry));
             }
         } catch (IOException e) {
             log.error("[ERROR] problems to start the Server Request Handler");
@@ -58,6 +59,7 @@ public class ServerRequestHandler {
     private static class ServerHandler implements Runnable {
         private final Socket socket;
         private final Marshaller marshaller = new Marshaller();
+        private InterceptorRegistry interceptorRegistry;
 
         @Override
         public void run() {
@@ -102,6 +104,7 @@ public class ServerRequestHandler {
         private ResponseMessage handleRequest(InternMessage internMessage){
             try {
             	Invoker inv = new Invoker();
+                inv.setInterceptorRegistry(interceptorRegistry);
                 return inv.invokeRemoteObject(internMessage);
             } catch (Exception e) {
                 log.error("Error in recover data from received package");
@@ -111,7 +114,5 @@ public class ServerRequestHandler {
         }
 
     }
-
-
 
 }
