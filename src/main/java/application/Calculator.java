@@ -33,6 +33,7 @@ public class Calculator {
 		
         return result;
     }
+
 	
 	//Post method, the attribute "router" is what sets the endpoint route 
 	@Post(router = "/sub")

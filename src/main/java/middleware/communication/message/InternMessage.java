@@ -9,4 +9,8 @@ public class InternMessage {
     private String methodType;
     private JSONObject body;
     private MessageType type;
+
+    public String getEndpoint(){
+        return getMethodType().toLowerCase() + getRoute();
+    }
 }

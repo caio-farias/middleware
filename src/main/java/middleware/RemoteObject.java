@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.util.concurrent.ConcurrentHashMap;
 
 import lombok.extern.slf4j.Slf4j;
+import middleware.communication.message.InternMessage;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.google.gson.Gson;
@@ -29,7 +30,15 @@ public class RemoteObject {
 	private static ConcurrentHashMap<Object, Method> methodsPut = new ConcurrentHashMap<>();
 	// Hashmap to save delete methods
 	private static ConcurrentHashMap<Object, Method> methodsDelete = new ConcurrentHashMap<>();
-	
+
+	public static String getRemoteObjectClass(InternMessage internMessage){
+		String endpoint = internMessage.getEndpoint();
+		Method runMethod = methodsGet.get(endpoint);
+		// Retrieve the method class
+		Class<?> clazz = runMethod.getDeclaringClass();
+		return clazz.getName();
+	}
+
 	//Method that adds a remote object to posts hashmap	
 	public static void addMethodPost(Object key, Method obj) {
 		methodsPost.put(key, obj);
