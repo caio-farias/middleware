@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/LogContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/LogInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InterceptorRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InvocationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/extension_pattern/InvocationInterceptor.java" afterDir="false" />
+    <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/model/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/ServerRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/ServerRequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/communication/message/InternMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/communication/message/InternMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
