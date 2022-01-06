@@ -9,6 +9,8 @@ import org.json.JSONObject;
 
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A MARSHALLER converts remote invocations into byte streams. The
@@ -65,9 +67,13 @@ public class Marshaller {
         msg.setRoute(parts[1]);
 
         // read header
+        Map<String, String> headers = new HashMap<String, String>();
         while ((s = in.readLine()) != null) {
             if (s.isEmpty()) {
                 break;
+            }else{
+                String[] values = s.split(":");
+                headers.put(values[0].trim(), values[1].trim());
             }
         }
 
@@ -78,6 +84,7 @@ public class Marshaller {
         }
 
         // setting message attributes
+        msg.setHeaders(headers);
         msg.setBody(new JSONObject(payload.toString()));
         msg.setType(MessageType.REQUEST);
         return msg;
