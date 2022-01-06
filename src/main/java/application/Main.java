@@ -1,7 +1,6 @@
 package application;
 
 import application.log.LogInterceptor;
-import application.registration.controller.ApplicationUserController;
 import extension_patterns.InterceptorRegistry;
 import middleware.Autumn;
 
@@ -13,7 +12,6 @@ public class Main {
     public static void main (String[] args){
     	//Instance of the class
         Calculator calc = new Calculator();
-        ApplicationUserController applicationUserController = new ApplicationUserController();
 
         LogInterceptor logger = new LogInterceptor("logger", new String[]{"before"});
         InterceptorRegistry interceptorRegistry = new InterceptorRegistry();
@@ -25,8 +23,6 @@ public class Main {
         server.setInterceptorRegistry(interceptorRegistry);
     	//Add method annotations and save in hashmaps
 //        server.addMethods(calc);
-
-        server.addMethods(applicationUserController);
         server.addMethodsWithInterceptor(calc, logger);
 
         //Start middleware in parameter port

@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class Token {
-
-
-
+    int accessToken;
+    String username;
 }

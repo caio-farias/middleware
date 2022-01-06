@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/model/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banco.db" beforeDir="false" afterPath="$PROJECT_DIR$/banco.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/ApplicationRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/ApplicationRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/model/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/model/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <recent name="util.message" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ApplicationRegistration">
     <configuration name="ApplicationRegistration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.registration.ApplicationRegistration" />
       <module name="middleware" />
@@ -141,8 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ApplicationRegistration" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Testhashmap.testHash" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.ReactorManager" />

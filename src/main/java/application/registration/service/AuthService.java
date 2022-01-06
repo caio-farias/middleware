@@ -8,5 +8,5 @@ public class AuthService {
 
     private final AuthRepository authRepository;
 
-    public AuthService(AuthRepository authRepository) { this.authRepository = authRepository; }
+    public AuthService() { this.authRepository = new AuthRepository(); }
 }
