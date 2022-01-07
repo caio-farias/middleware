@@ -44,8 +44,6 @@ public class AuthInteceptor extends InvocationInterceptor {
             return true;
         }
 
-        //Falta verificar se o accessToken esta no banco
-
         return false;
     }
 

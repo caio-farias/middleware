@@ -84,4 +84,23 @@ public class SQLiteJDBCDriverConnection {
         }
         return users;
     }
+
+    public ApplicationUser logarUser(String username, String password) throws SQLException {
+        if (this.connection != null){
+            ApplicationUser applicationUser = new ApplicationUser();
+
+            String sql = "SELECT * FROM application_user WHERE username = " + username + " AND password = " + password;
+            PreparedStatement stmt = this.connection.prepareStatement(sql);
+            ResultSet resultSet = stmt.executeQuery();
+
+            applicationUser.setId(resultSet.getInt("id"));
+            applicationUser.setUsername(resultSet.getString("username"));
+            applicationUser.setEmail(resultSet.getString("email"));
+            applicationUser.setPassword(resultSet.getString("password"));
+
+            return applicationUser;
+        }
+        return null;
+    }
+
 }
