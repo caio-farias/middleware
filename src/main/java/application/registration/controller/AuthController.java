@@ -13,8 +13,10 @@ public class AuthController {
     public AuthController() { this.authService = new AuthService(); }
 
     @Post(router = "/login")
-    public Integer login(JSONObject jsonObject){
-        return 12;
+    public JSONObject login(JSONObject jsonObject){
+        //Build the return JSON
+        JSONObject result = new JSONObject();
+        return result;
     }
 
 }
