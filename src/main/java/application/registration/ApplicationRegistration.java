@@ -27,6 +27,7 @@ public class ApplicationRegistration {
 
         //Add method annotations and save in hashmaps
         server.addMethods(authController);
+        server.addMethods(applicationUserController);
         server.addMethodsWithInterceptor(applicationUserController, authentication);
 
     	//Start middleware in parameter port
