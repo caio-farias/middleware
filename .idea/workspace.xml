@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="Changes">
+    <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="Inserindo switch para tipo de metodo e implementando o HandleResponse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/auth/AuthInteceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/auth/AuthInteceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/RemoteObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,21 +162,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/middleware/Invoker.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Inserindo switch para tipo de metodo e implementando o HandleResponse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserindo switch para tipo de metodo e implementando o HandleResponse" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/middleware$Main.ic" NAME="Main Coverage Results" MODIFIED="1640724610378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -31,7 +31,19 @@ public class RemoteObject {
 
 	public static String getRemoteObjectClass(InternMessage internMessage){
 		String endpoint = internMessage.getEndpoint();
-		Method runMethod = methodsGet.get(endpoint);
+		Method runMethod;
+		switch(internMessage.getMethodType()){
+			case "GET":
+				runMethod = methodsGet.get(endpoint);
+			case "POST":
+				runMethod = methodsPost.get(endpoint);
+			case "PUT":
+				runMethod = methodsPut.get(endpoint);
+			case "DELETE":
+				runMethod = methodsDelete.get(endpoint);
+			default:
+				runMethod = methodsGet.get(endpoint);
+		}
 		// Retrieve the method class
 		Class<?> clazz = runMethod.getDeclaringClass();
 		return clazz.getName();

@@ -36,8 +36,18 @@ public class Invoker {
                 return respMsg;
             } catch(Exception e){
                 e.printStackTrace();
-                return new ResponseMessage(e.getMessage(), "Sem Autorização", "");
+                return HandleResponse(e.getMessage());
             }
+        }
+
+        private ResponseMessage HandleResponse(String message)
+        {
+            return switch (message) {
+                case "401" -> new ResponseMessage(message, "Unauthorized", "");
+                case "403" -> new ResponseMessage(message, "Forbidden", "");
+                case "500" -> new ResponseMessage(message, "Internal Server Error", "");
+                default -> new ResponseMessage(message, "Error", "");
+            };
         }
 
         public void setInterceptorRegistry(InterceptorRegistry interceptorRegistry){
