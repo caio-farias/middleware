@@ -7,9 +7,9 @@
     <list default="true" id="a05abd13-ffa8-456c-b334-17e4e950e7ff" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/auth/AuthInteceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/auth/AuthInteceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/repository/SQLiteJDBCDriverConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/SQLiteJDBCDriverConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Autumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/middleware/Invoker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
       <recent name="util.message" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationRegistration">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ApplicationRegistration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.registration.ApplicationRegistration" />
       <module name="middleware" />
@@ -134,8 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicationRegistration" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ApplicationRegistration" />
         <item itemvalue="JUnit.Testhashmap.testHash" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.ReactorManager" />
@@ -167,6 +167,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/middleware/Invoker.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/middleware$Main.ic" NAME="Main Coverage Results" MODIFIED="1640724610378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

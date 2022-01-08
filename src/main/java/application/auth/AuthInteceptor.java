@@ -22,7 +22,7 @@ public class AuthInteceptor extends InvocationInterceptor {
         super.run(internMessage);
 
         if (noAuth(internMessage))
-            throw new IOException("Sem autorização!");
+            throw new IOException("401");
     }
 
 

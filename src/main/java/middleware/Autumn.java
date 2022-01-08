@@ -63,7 +63,7 @@ public class Autumn {
 				// Allows the method to be accessed and invoked later
 				method.setAccessible(true);
 				// Saves the method to the hashmap following the key pattern "post + class route + method route"
-				String endpointMethod = "get" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Post.class).router();
+				String endpointMethod = "post" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Post.class).router();
 				RemoteObject.addMethodPost("post" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Post.class).router(), method);
 				interceptorRegistry.registerMethodInInterceptor(object, invocationInterceptor.getName(), endpointMethod);
 				// Checks if the annotation is a Put
@@ -72,14 +72,14 @@ public class Autumn {
 				method.setAccessible(true);
 				// Saves the method to the hashmap following the key pattern "put + class route + method route"
 				RemoteObject.addMethodPut("put" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Put.class).router(), method);
-				String endpointMethod = "get" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Put.class).router();
+				String endpointMethod = "put" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Put.class).router();
 				interceptorRegistry.registerMethodInInterceptor(object, invocationInterceptor.getName(), endpointMethod);
 				// Checks if the annotation is a Delete
 			}else if (method.isAnnotationPresent(Delete.class)) {
 				// Allows the method to be accessed and invoked later
 				method.setAccessible(true);
 				// Saves the method to the hashmap following the key pattern "delete + class route + method route"
-				String endpointMethod = "get" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Delete.class).router();
+				String endpointMethod = "delete" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Delete.class).router();
 				RemoteObject.addMethodDelete("delete" + clazz.getAnnotation(RequestMap.class).router() + method.getAnnotation(Delete.class).router(), method);
 				interceptorRegistry.registerMethodInInterceptor(object, invocationInterceptor.getName(), endpointMethod);
 			}

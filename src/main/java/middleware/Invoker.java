@@ -3,6 +3,7 @@ package middleware;
 import java.lang.reflect.InvocationTargetException;
 
 import extension_patterns.InterceptorRegistry;
+import lombok.SneakyThrows;
 import middleware.communication.message.InternMessage;
 import middleware.communication.message.ResponseMessage;
 
@@ -35,19 +36,20 @@ public class Invoker {
                 return respMsg;
             } catch(Exception e){
                 e.printStackTrace();
+                return new ResponseMessage(e.getMessage(), "Sem Autorização", "");
             }
-            return null;
         }
 
         public void setInterceptorRegistry(InterceptorRegistry interceptorRegistry){
             this.interceptorRegistry = interceptorRegistry;;
         }
 
+        @SneakyThrows
         public void beforeInvocationHook(String remoteObjName, InterceptorRegistry interceptorRegistry, InternMessage internMessage){
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "before");
             }catch (Exception e){
-                e.printStackTrace();
+                throw e;
             }
         }
 
