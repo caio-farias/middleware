@@ -6,6 +6,7 @@ import middleware.communication.message.InternMessage;
 
 import java.io.*;
 import java.util.Date;
+import java.util.Map;
 
 public class LogInterceptor extends InvocationInterceptor {
     private final String logPath ="src/main/java/application/log/log.txt";
@@ -23,7 +24,13 @@ public class LogInterceptor extends InvocationInterceptor {
     private String getNewLogContent(){
         InvocationContext invocationContext = getInvocationContext();
         Date date = new Date();
-        String newLogLine =  date  + " - " + invocationContext.getType() + "/" +  invocationContext.getMethodType() + " - " + "Interceptor: "  + getName() ;
+        String host = invocationContext.getHeader("Host");
+        String contentType = invocationContext.getHeader("Content-Type");
+        String newLogLine =  date + " | "
+                + "made by: " + host + " | "
+                + "endpoint: " + invocationContext.getMethodType() + " " + invocationContext.getRoute() + " | "
+                + "content-type: " + contentType + " | "
+                + "intercepted by: "  + this.getClass().getName() ;
         return newLogLine;
     }
 

@@ -21,15 +21,18 @@ public class Main {
         InterceptorRegistry interceptorRegistry = new InterceptorRegistry();
 
         LogInterceptor logger = new LogInterceptor("logger", new String[]{"before"});
+        AuthInterceptor authentication = new AuthInterceptor("authentication", new String[]{"before"});
 
         interceptorRegistry.addRemoteObject(calc);
+        interceptorRegistry.addRemoteObject(authController);
+        interceptorRegistry.addRemoteObject(applicationUserController);
+
+        // LogInterceptor - controllers
         interceptorRegistry.assignInterceptorToRemoteObject(calc, logger);
         interceptorRegistry.assignInterceptorToRemoteObject(authController, logger);
         interceptorRegistry.assignInterceptorToRemoteObject(applicationUserController, logger);
 
-
-        AuthInterceptor authentication = new AuthInterceptor("authentication", new String[]{"before"});
-        interceptorRegistry.addRemoteObject(applicationUserController);
+        // AuthInterceptor - controllers
         interceptorRegistry.assignInterceptorToRemoteObject(applicationUserController, authentication);
 
     	//Instance of the middleware
@@ -37,8 +40,9 @@ public class Main {
         server.setInterceptorRegistry(interceptorRegistry);
       
         //Add method annotations and save in hashmaps
-        server.addMethods(authController);
         server.addMethodsWithInterceptor(calc, logger);
+        server.addMethodsWithInterceptor(authController, logger);
+        server.addMethodsWithInterceptor(applicationUserController, logger);
         server.addMethodsWithInterceptor(applicationUserController, authentication);
 
         //Start middleware in parameter port

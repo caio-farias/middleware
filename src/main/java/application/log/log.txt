@@ -1,4 +1,0 @@
-Mon Jan 10 13:42:20 BRT 2022 - REQUEST/GET - Interceptor: logger
-Mon Jan 10 13:42:35 BRT 2022 - REQUEST/POST - Interceptor: logger
-Mon Jan 10 13:42:44 BRT 2022 - REQUEST/PUT - Interceptor: logger
-Mon Jan 10 13:42:47 BRT 2022 - REQUEST/DELETE - Interceptor: logger
