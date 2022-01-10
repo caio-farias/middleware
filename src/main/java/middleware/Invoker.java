@@ -60,6 +60,7 @@ public class Invoker {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "before");
             }catch (Exception e){
                 throw e;
+                e.printStackTrace();
             }
         }
 
@@ -67,6 +68,7 @@ public class Invoker {
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "after");
             }catch (Exception e){
+                throw e;
                 e.printStackTrace();
             }
         }

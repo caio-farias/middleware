@@ -21,7 +21,7 @@ public class Main {
     	//Instance of the middleware
         Autumn server = new Autumn();
         server.setInterceptorRegistry(interceptorRegistry);
-
+      
         //Add method annotations and save in hashmaps
         server.addMethods(calc);
         server.addMethodsWithInterceptor(calc, logger);
