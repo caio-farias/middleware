@@ -89,7 +89,7 @@ public class SQLiteJDBCDriverConnection {
         if (this.connection != null){
             ApplicationUser applicationUser = new ApplicationUser();
 
-            String sql = "SELECT * FROM application_user WHERE username = " + username + " AND password = " + password;
+            String sql = "SELECT * FROM application_user WHERE username = '" + username.toString() + "' AND password = '" + password + "'";
             PreparedStatement stmt = this.connection.prepareStatement(sql);
             ResultSet resultSet = stmt.executeQuery();
 

@@ -1,6 +1,6 @@
 package application.registration;
 
-import application.auth.AuthInteceptor;
+import application.auth.AuthInterceptor;
 import application.registration.controller.ApplicationUserController;
 import application.registration.controller.AuthController;
 import extension_patterns.InterceptorRegistry;
@@ -16,7 +16,7 @@ public class ApplicationRegistration {
         AuthController authController = new AuthController();
         ApplicationUserController applicationUserController = new ApplicationUserController();
 
-        AuthInteceptor authentication = new AuthInteceptor("authentication", new String[]{"before"});
+        AuthInterceptor authentication = new AuthInterceptor("authentication", new String[]{"before"});
         InterceptorRegistry interceptorRegistry = new InterceptorRegistry();
         interceptorRegistry.addRemoteObject(applicationUserController);
         interceptorRegistry.assignInterceptorToRemoteObject(applicationUserController, authentication);

@@ -51,25 +51,29 @@ public class Invoker {
         }
 
         public void setInterceptorRegistry(InterceptorRegistry interceptorRegistry){
-            this.interceptorRegistry = interceptorRegistry;;
+            this.interceptorRegistry = interceptorRegistry;
         }
 
         @SneakyThrows
         public void beforeInvocationHook(String remoteObjName, InterceptorRegistry interceptorRegistry, InternMessage internMessage){
+            if(interceptorRegistry == null)
+                return;
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "before");
             }catch (Exception e){
-                throw e;
                 e.printStackTrace();
+                throw e;
             }
         }
-
+        @SneakyThrows
         public void afterInvocationHook(String remoteObjName, InterceptorRegistry interceptorRegistry, InternMessage internMessage){
+            if(interceptorRegistry == null)
+                return;
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "after");
             }catch (Exception e){
-                throw e;
                 e.printStackTrace();
+                throw e;
             }
         }
 }

@@ -7,12 +7,12 @@ import middleware.communication.message.InternMessage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class AuthInteceptor extends InvocationInterceptor {
+public class AuthInterceptor extends InvocationInterceptor {
 
     private final AuthRepository authRepository;
     static String xApiKey = "L996OSjd241VrBk1cRxky7c9XwtB3VxYdK2rY5n6";
 
-    public AuthInteceptor(String name, String[] hookTypesConsumer) {
+    public AuthInterceptor(String name, String[] hookTypesConsumer) {
         super(name, hookTypesConsumer);
         authRepository = new AuthRepository();
     }
