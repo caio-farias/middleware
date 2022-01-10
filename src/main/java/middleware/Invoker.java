@@ -3,6 +3,7 @@ package middleware;
 import java.lang.reflect.InvocationTargetException;
 
 import extension_patterns.InterceptorRegistry;
+import lombok.SneakyThrows;
 import middleware.communication.message.InternMessage;
 import middleware.communication.message.ResponseMessage;
 
@@ -35,18 +36,30 @@ public class Invoker {
                 return respMsg;
             } catch(Exception e){
                 e.printStackTrace();
+                return HandleResponse(e.getMessage());
             }
-            return null;
+        }
+
+        private ResponseMessage HandleResponse(String message)
+        {
+            return switch (message) {
+                case "401" -> new ResponseMessage(message, "Unauthorized", "");
+                case "403" -> new ResponseMessage(message, "Forbidden", "");
+                case "500" -> new ResponseMessage(message, "Internal Server Error", "");
+                default -> new ResponseMessage(message, "Error", "");
+            };
         }
 
         public void setInterceptorRegistry(InterceptorRegistry interceptorRegistry){
             this.interceptorRegistry = interceptorRegistry;;
         }
 
+        @SneakyThrows
         public void beforeInvocationHook(String remoteObjName, InterceptorRegistry interceptorRegistry, InternMessage internMessage){
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "before");
             }catch (Exception e){
+                throw e;
                 e.printStackTrace();
             }
         }
@@ -55,6 +68,7 @@ public class Invoker {
             try {
                 interceptorRegistry.runRemoteObjectInterceptors(remoteObjName, internMessage, "after");
             }catch (Exception e){
+                throw e;
                 e.printStackTrace();
             }
         }
