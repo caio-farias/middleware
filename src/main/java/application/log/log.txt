@@ -1,0 +1,17 @@
+Mon Jan 10 19:43:05 GMT-03:00 2022 | made by: localhost | endpoint: POST /calc/sub | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 19:44:11 GMT-03:00 2022 | made by: localhost | endpoint: POST /calc/sub | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 19:53:47 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 19:55:26 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 19:55:44 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 19:57:26 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:00:54 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:05:49 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:09:26 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:10:40 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:13:46 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:16:08 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:18:32 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:21:08 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:21:46 GMT-03:00 2022 | made by: localhost | endpoint: POST /user/add | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:21:59 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor
+Mon Jan 10 20:28:21 GMT-03:00 2022 | made by: localhost | endpoint: GET /user/list | content-type: application/json | intercepted by: application.log.LogInterceptor

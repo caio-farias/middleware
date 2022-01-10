@@ -22,8 +22,7 @@ public class AuthRepository {
             statement.execute("CREATE TABLE IF NOT EXISTS " +
                     "token(" +
                     "access_token INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "username VARCHAR"+
-                    ")"
+                    "username VARCHAR)"
             );
         }
     }
@@ -35,7 +34,7 @@ public class AuthRepository {
                     "'" + token.getUsername() + "')";
             statement.execute(sql);
 
-            sql = "SELECT access_token FROM token WHERE username = " + token.getUsername();
+            sql = "SELECT access_token FROM token WHERE username = '" + token.getUsername()+"'";
             PreparedStatement stmt = this.connection.prepareStatement(sql);
             ResultSet resultSet = stmt.executeQuery();
 
@@ -48,12 +47,11 @@ public class AuthRepository {
 
     public boolean existToken(Integer accessToken) throws SQLException {
         if (this.connection != null){
-            Statement statement = this.connection.createStatement();
-            String sql = "SELECT username FROM token WHERE access_token = " + accessToken;
+            String sql = "SELECT username FROM token WHERE access_token = " + accessToken.toString();
             PreparedStatement stmt = this.connection.prepareStatement(sql);
             ResultSet resultSet = stmt.executeQuery();
 
-            return resultSet.getString("username") != null;
+            return !resultSet.wasNull();
         }
         return false;
     }

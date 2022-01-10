@@ -21,30 +21,30 @@ public class AuthInterceptor extends InvocationInterceptor {
     public void run(InternMessage internMessage) throws IOException {
         super.run(internMessage);
 
-        if (noAuth(internMessage))
-            throw new IOException("401");
+        String erroAuth = verifyError(internMessage);
+        if (erroAuth != null)
+            throw new IOException(erroAuth);
     }
 
 
-    public boolean noAuth(InternMessage internMessage){
+    public String verifyError(InternMessage internMessage){
         if(!internMessage.getHeaders().get("x-api-key").equals(xApiKey))
-            return true;
+            return "401";
 
         String authorization = internMessage.getHeaders().get("Authorization");
         if (authorization == null)
-            return true;
+            return "401";
 
         try{
-            if(authRepository.existToken(Integer.parseInt(authorization.replace("bearer ", ""))))
-                return true;
+            if(!authRepository.existToken(Integer.parseInt(authorization.replace("bearer ", ""))))
+                return "401";
 
-        }catch (NumberFormatException e){
-            return true;
-        }catch (SQLException sqlException) {
-            return true;
+        }catch (NumberFormatException | SQLException e){
+            System.out.println("Erro interno");
+            return "500";
         }
 
-        return false;
+        return null;
     }
 
 }
