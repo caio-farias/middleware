@@ -1,6 +1,6 @@
 package application.auth;
 
-import application.registration.repository.AuthRepository;
+import application.registration.repository.SQLiteJDBCDriverConnection;
 import extension_patterns.InvocationInterceptor;
 import middleware.communication.message.InternMessage;
 
@@ -9,12 +9,12 @@ import java.sql.SQLException;
 
 public class AuthInterceptor extends InvocationInterceptor {
 
-    private final AuthRepository authRepository;
+    private final SQLiteJDBCDriverConnection authRepository;
     static String xApiKey = "L996OSjd241VrBk1cRxky7c9XwtB3VxYdK2rY5n6";
 
     public AuthInterceptor(String name, String[] hookTypesConsumer) {
         super(name, hookTypesConsumer);
-        authRepository = new AuthRepository();
+        authRepository = SQLiteJDBCDriverConnection.getInstance();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class AuthInterceptor extends InvocationInterceptor {
                 return "401";
 
         }catch (NumberFormatException | SQLException e){
-            System.out.println("Erro interno");
+            e.printStackTrace();
             return "500";
         }
 

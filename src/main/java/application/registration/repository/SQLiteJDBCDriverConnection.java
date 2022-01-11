@@ -1,6 +1,7 @@
 package application.registration.repository;
 
 import application.registration.model.ApplicationUser;
+import application.registration.model.Token;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.*;
@@ -10,7 +11,16 @@ import java.util.ArrayList;
 public class SQLiteJDBCDriverConnection {
     private Connection connection = null;
 
-    public SQLiteJDBCDriverConnection(){
+    private static SQLiteJDBCDriverConnection uniqueInstance;
+
+    public static synchronized SQLiteJDBCDriverConnection getInstance() {
+        if (uniqueInstance == null)
+            uniqueInstance = new SQLiteJDBCDriverConnection();
+
+        return uniqueInstance;
+    }
+
+    private SQLiteJDBCDriverConnection(){
         try {
             this.connection = DriverManager.getConnection("jdbc:sqlite:banco.db");
             this.createDatabase();
@@ -30,6 +40,11 @@ public class SQLiteJDBCDriverConnection {
                         "username VARCHAR, " +
                         "email VARCHAR, " +
                         "password VARCHAR)"
+            );
+            statement.execute("CREATE TABLE IF NOT EXISTS " +
+                    "token(" +
+                    "access_token INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "username VARCHAR)"
             );
         }
     }
@@ -101,6 +116,37 @@ public class SQLiteJDBCDriverConnection {
             return applicationUser;
         }
         return null;
+    }
+
+
+    //Auth
+    public Token createToken(Token token) throws SQLException {
+        if (this.connection != null){
+            Statement statement = this.connection.createStatement();
+            String sql = "INSERT INTO token(username) VALUES (" +
+                    "'" + token.getUsername() + "')";
+            statement.execute(sql);
+
+            sql = "SELECT access_token FROM token WHERE username = '" + token.getUsername()+"'";
+            PreparedStatement stmt = this.connection.prepareStatement(sql);
+            ResultSet resultSet = stmt.executeQuery();
+
+            token.setAccessToken(resultSet.getInt("access_token"));
+
+            return token;
+        }
+        return null;
+    }
+
+    public boolean existToken(Integer accessToken) throws SQLException {
+        if (this.connection != null){
+            String sql = "SELECT * FROM token WHERE access_token = " + accessToken.toString();
+            PreparedStatement stmt = this.connection.prepareStatement(sql);
+            ResultSet resultSet = stmt.executeQuery();
+
+            return resultSet.next();
+        }
+        return false;
     }
 
 }

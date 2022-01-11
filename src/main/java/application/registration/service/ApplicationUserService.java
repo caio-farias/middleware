@@ -13,7 +13,7 @@ public class ApplicationUserService {
     private final SQLiteJDBCDriverConnection applicationUserRepository;
 
     public ApplicationUserService() {
-        this.applicationUserRepository = new SQLiteJDBCDriverConnection();
+        this.applicationUserRepository = SQLiteJDBCDriverConnection.getInstance();
     }
 
     public void insertUser(ApplicationUser applicationUser){

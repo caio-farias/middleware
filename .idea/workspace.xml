@@ -9,7 +9,10 @@
       <change beforePath="$PROJECT_DIR$/banco.db" beforeDir="false" afterPath="$PROJECT_DIR$/banco.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/auth/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/auth/AuthInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/application/log/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/log/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/repository/AuthRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/repository/SQLiteJDBCDriverConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/repository/SQLiteJDBCDriverConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/service/ApplicationUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/ApplicationUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/registration/service/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
